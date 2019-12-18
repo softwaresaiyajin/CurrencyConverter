@@ -1,0 +1,2 @@
+zgithub "ReactiveX/RxSwift" ~> 4.1.2
+github "RxSwiftCommunity/RxAlamofire" ~> 4.2
