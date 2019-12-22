@@ -45,34 +45,17 @@ public final class HomeViewController: UITableViewController {
         super.viewDidLoad()
 
         title = Constants.controllerTitle;
+        initializeStyle()
         initializeBinding()
-        processUIAdjustments()
-        // Do any additional setup after loading the view.
     }
     
-    private func processUIAdjustments() {
+    private func initializeStyle() {
         
-        submitButton.layer.cornerRadius = 10
-        submitButton.clipsToBounds = true
-        submitButton.rx
-            .controlEvent(.touchUpInside)
-            .asObservable()
+        viewModel?
+            .getStyle()
             .subscribe(onNext : { [weak self] current in
                 
-                self?.viewModel?.submitConversionRequest()
-                    .subscribe(onNext : { [weak self] current in
-                        
-                        let message = current?.hm_message
-                        let title = (current?.hm_isSuccess ?? false)
-                            ? "Currency converted"
-                            : "Conversion failed"
-                        let alert = UIAlertController(title: title,
-                                                      message: message,
-                                                      preferredStyle: .alert)
-                        alert.addActions([], includesCancel: true)
-                        self?.present(alert, animated: true, completion: nil)
-                        
-                    }).disposed(by: self?.bag ?? DisposeBag())
+                StyleHelper.apply(style: current, to: self?.submitButton)
                 
             }).disposed(by: bag)
     }
@@ -155,6 +138,29 @@ public final class HomeViewController: UITableViewController {
     }
 
     private func initializeBinding() {
+        
+        submitButton.rx
+            .controlEvent(.touchUpInside)
+            .asObservable()
+            .subscribe(onNext : { [weak self] current in
+                
+                self?.viewModel?.submitConversionRequest()
+                    .subscribe(onNext : { [weak self] current in
+                        
+                        let message = current?.hm_message
+                        let title = (current?.hm_isSuccess ?? false)
+                            ? "Currency converted"
+                            : "Conversion failed"
+                        let alert = UIAlertController(title: title,
+                                                      message: message,
+                                                      preferredStyle: .alert)
+                        alert.addActions([], includesCancel: true)
+                        self?.present(alert, animated: true, completion: nil)
+                        
+                    }).disposed(by: self?.bag ?? DisposeBag())
+                
+            }).disposed(by: bag)
+        
         
         let dataSource = RxTableViewSectionedReloadDataSource<SectionData>(
             configureCell: { [weak self] dataSource, tableView, indexPath, item in

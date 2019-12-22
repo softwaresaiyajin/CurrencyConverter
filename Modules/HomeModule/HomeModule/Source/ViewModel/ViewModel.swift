@@ -131,7 +131,7 @@ class ViewModel {
     
     func goNextScreen()
     {
-        routeProvider?.hm_navigate(to: .next, data: nil);
+        routeProvider?.hm_navigate(to: .next, parameters: nil);
     }
     
     func submitConversionRequest() -> Observable<ConversionResultProtocol?> {
@@ -150,9 +150,11 @@ class ViewModel {
             self?.fetchData()
             
         }).disposed(by: disposeBag ?? DisposeBag())
-        
-    
+
         return result
     }
     
+    func getStyle() -> Observable<StyleProtocol?> {
+        return dataProvider?.hm_getStyle() ?? Observable.just(nil)
+    }
 }

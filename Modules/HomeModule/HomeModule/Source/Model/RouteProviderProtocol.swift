@@ -16,6 +16,6 @@ public enum Route: String {
 
 public protocol RouteProviderProtocol: class {
     
-    func hm_navigate(to path: Route, data parameters: Any?)
+    func hm_navigate(to path: Route, parameters: Any?)
     
 }

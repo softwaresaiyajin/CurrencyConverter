@@ -40,11 +40,15 @@ extension CurrencyConversionResult: ConversionResultProtocol {
         
         return isSuccess
         ?  "You have converted \(fromAmount.appCompatibleFormat(code: fromCurrency)) to \(toAmount.appCompatibleFormat(code: toCurrency)). Commission fee - \(commissionFee.appCompatibleFormat(code: fromCurrency))."
-        : "Insufficient funds"
+        : "Invalid amount"
     }
 }
 
 extension Provider: DataProviderProtocol {
+    
+    func hm_getStyle() -> Observable<StyleProtocol?> {
+        return Observable.just(self)
+    }
     
     func hm_getCurrencyBalances() -> Observable<[CurrencyBalanceProtocol]> {
         
@@ -82,7 +86,14 @@ extension Provider: DataProviderProtocol {
 
 extension Provider: RouteProviderProtocol {
     
-    func hm_navigate(to path: Route, data parameters: Any?) {
-        
+    func hm_navigate(to path: Route, parameters: Any?) {
+        //navigate if there's another screen
     }
+}
+
+extension Provider: StyleProtocol {
+    
+    var hm_buttonColor: UIColor? { return appearance.themeColor }
+    
+    var hm_buttonCornerRadius: CGFloat { return appearance.buttonCornerRadius }
 }

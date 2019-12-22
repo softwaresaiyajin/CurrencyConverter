@@ -27,14 +27,33 @@ class MainController {
         return DisposeBag()
     }()
     
+    private var provider: Provider?
+    
     private init() {}
     
-    func launch(in window: UIWindow) {
-        
+    func launch(in window: UIWindow, provider: Provider) {
+        self.provider = provider
         self.window = window;
         setupLocations()
         setupLocationObservers()
         setupRoot()
+        setupAppearance()
+    }
+    
+    private func setupAppearance() {
+        
+        let style = provider?.appearance
+        
+        let navAppearance = UINavigationBar.appearance()
+        navAppearance.isTranslucent = false
+        navAppearance.barTintColor = style?.themeColor
+
+        if let font = style?.navigationBarFont,
+            let color = style?.navigationBarTitleColor {
+            navAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: color,
+                                                 NSAttributedString.Key.font: font]
+        }
+        
     }
     
     private func setupLocations() {

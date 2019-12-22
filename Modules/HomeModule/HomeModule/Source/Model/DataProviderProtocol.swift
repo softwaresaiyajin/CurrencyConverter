@@ -11,6 +11,8 @@ import RxSwift
 
 public protocol DataProviderProtocol: class {
     
+    func hm_getStyle() -> Observable<StyleProtocol?>
+    
     func hm_getCurrencyBalances() -> Observable<[CurrencyBalanceProtocol]>
     
     func hm_getConvertedAmountPreview(_ amount: Double,

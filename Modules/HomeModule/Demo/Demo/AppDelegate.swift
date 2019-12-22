@@ -51,9 +51,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+extension AppDelegate: StyleProtocol {
+    
+    var hm_buttonColor: UIColor? { return UIColor(red: 16/255, green: 117/255, blue: 193/255, alpha: 1)}
+    
+    var hm_buttonCornerRadius: CGFloat { return 10 }
+    
+}
 
 
 extension AppDelegate: DataProviderProtocol {
+    
+    func hm_getStyle() -> Observable<StyleProtocol?> {
+        return Observable.just(self)
+    }
     
     func hm_getConvertedAmountPreview(_ amount: Double,
                                       from originCurrency: String,

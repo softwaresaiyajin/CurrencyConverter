@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         if let window = self.window {
-            MainController.instance.launch(in: window)
+            MainController.instance.launch(in: window, provider: Provider.shared)
         }
         return true
     }

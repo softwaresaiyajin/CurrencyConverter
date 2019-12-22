@@ -12,5 +12,7 @@ class Provider {
     
     static let shared = Provider()
     
+    let appearance = Appearance()
+    
     private init() {}
 }
