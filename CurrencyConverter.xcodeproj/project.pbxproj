@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74D9531623AA819500B4EEA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9531523AA819500B4EEA0 /* AppDelegate.swift */; };
-		74D9531823AA819500B4EEA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9531723AA819500B4EEA0 /* ViewController.swift */; };
+		74917BAE23AF7D8C00224009 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74917BAC23AF7D8C00224009 /* RxDataSources.framework */; };
+		74917BAF23AF7D8C00224009 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74917BAD23AF7D8C00224009 /* Differentiator.framework */; };
+		74917BBB23AF7E8100224009 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BBA23AF7E8100224009 /* MainController.swift */; };
+		74917BBD23AF7F7F00224009 /* DataModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74917BBC23AF7F7F00224009 /* DataModule.framework */; };
+		74917BC023AF7FF500224009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BBE23AF7FF500224009 /* AppDelegate.swift */; };
+		74917BC123AF7FF500224009 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BBF23AF7FF500224009 /* ViewController.swift */; };
+		74917BC323AF800C00224009 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BC223AF800C00224009 /* Provider.swift */; };
+		74917BC523AF811A00224009 /* Home+Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BC423AF811A00224009 /* Home+Provider.swift */; };
+		74917BD323AF99DF00224009 /* PriceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BD223AF99DF00224009 /* PriceHelper.swift */; };
 		74D9531B23AA819500B4EEA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D9531923AA819500B4EEA0 /* Main.storyboard */; };
 		74D9531D23AA819600B4EEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D9531C23AA819600B4EEA0 /* Assets.xcassets */; };
 		74D9532023AA819600B4EEA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D9531E23AA819600B4EEA0 /* LaunchScreen.storyboard */; };
@@ -39,9 +46,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74917BAC23AF7D8C00224009 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		74917BAD23AF7D8C00224009 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		74917BBA23AF7E8100224009 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		74917BBC23AF7F7F00224009 /* DataModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74917BBE23AF7FF500224009 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		74917BBF23AF7FF500224009 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74917BC223AF800C00224009 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		74917BC423AF811A00224009 /* Home+Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Provider.swift"; sourceTree = "<group>"; };
+		74917BD223AF99DF00224009 /* PriceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceHelper.swift; sourceTree = "<group>"; };
 		74D9531223AA819500B4EEA0 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		74D9531523AA819500B4EEA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74D9531723AA819500B4EEA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74D9531A23AA819500B4EEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74D9531C23AA819600B4EEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74D9531F23AA819600B4EEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,9 +78,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74917BBD23AF7F7F00224009 /* DataModule.framework in Frameworks */,
+				74917BAF23AF7D8C00224009 /* Differentiator.framework in Frameworks */,
 				74D9535023AA82C600B4EEA0 /* HomeModule.framework in Frameworks */,
 				74D9534A23AA820800B4EEA0 /* RxCocoa.framework in Frameworks */,
 				74D9534923AA820800B4EEA0 /* Alamofire.framework in Frameworks */,
+				74917BAE23AF7D8C00224009 /* RxDataSources.framework in Frameworks */,
 				74D9534B23AA820800B4EEA0 /* RxSwift.framework in Frameworks */,
 				74D9534C23AA820800B4EEA0 /* RxAlamofire.framework in Frameworks */,
 			);
@@ -89,6 +106,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74917BB023AF7E0100224009 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				74917BB523AF7E2D00224009 /* Controller */,
+				74917BB423AF7E2700224009 /* Provider */,
+				74917BB323AF7E1D00224009 /* Template */,
+				74917BB223AF7E1600224009 /* Helper */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		74917BB123AF7E0600224009 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		74917BB223AF7E1600224009 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				74917BD223AF99DF00224009 /* PriceHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		74917BB323AF7E1D00224009 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				74917BBE23AF7FF500224009 /* AppDelegate.swift */,
+				74917BBF23AF7FF500224009 /* ViewController.swift */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		74917BB423AF7E2700224009 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				74917BC223AF800C00224009 /* Provider.swift */,
+				74917BC423AF811A00224009 /* Home+Provider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		74917BB523AF7E2D00224009 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				74917BBA23AF7E8100224009 /* MainController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		74D9530923AA819500B4EEA0 = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +183,8 @@
 		74D9531423AA819500B4EEA0 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
-				74D9531523AA819500B4EEA0 /* AppDelegate.swift */,
-				74D9531723AA819500B4EEA0 /* ViewController.swift */,
+				74917BB123AF7E0600224009 /* Resource */,
+				74917BB023AF7E0100224009 /* Source */,
 				74D9531923AA819500B4EEA0 /* Main.storyboard */,
 				74D9531C23AA819600B4EEA0 /* Assets.xcassets */,
 				74D9531E23AA819600B4EEA0 /* LaunchScreen.storyboard */,
@@ -146,8 +215,10 @@
 			isa = PBXGroup;
 			children = (
 				74D9534523AA820800B4EEA0 /* Alamofire.framework */,
+				74917BAD23AF7D8C00224009 /* Differentiator.framework */,
 				74D9534823AA820800B4EEA0 /* RxAlamofire.framework */,
 				74D9534623AA820800B4EEA0 /* RxCocoa.framework */,
+				74917BAC23AF7D8C00224009 /* RxDataSources.framework */,
 				74D9534723AA820800B4EEA0 /* RxSwift.framework */,
 			);
 			name = External;
@@ -156,6 +227,7 @@
 		74D9534E23AA82C600B4EEA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74917BBC23AF7F7F00224009 /* DataModule.framework */,
 				74D9534F23AA82C600B4EEA0 /* HomeModule.framework */,
 			);
 			name = Frameworks;
@@ -230,6 +302,7 @@
 				TargetAttributes = {
 					74D9531123AA819500B4EEA0 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					74D9532523AA819600B4EEA0 = {
 						CreatedOnToolsVersion = 10.1;
@@ -301,6 +374,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -317,8 +392,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74D9531823AA819500B4EEA0 /* ViewController.swift in Sources */,
-				74D9531623AA819500B4EEA0 /* AppDelegate.swift in Sources */,
+				74917BC323AF800C00224009 /* Provider.swift in Sources */,
+				74917BD323AF99DF00224009 /* PriceHelper.swift in Sources */,
+				74917BC123AF7FF500224009 /* ViewController.swift in Sources */,
+				74917BC023AF7FF500224009 /* AppDelegate.swift in Sources */,
+				74917BBB23AF7E8100224009 /* MainController.swift in Sources */,
+				74917BC523AF811A00224009 /* Home+Provider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +572,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,6 +585,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paysera.CurrencyConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -514,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

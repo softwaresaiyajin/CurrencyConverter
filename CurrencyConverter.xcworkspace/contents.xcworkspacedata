@@ -15,6 +15,9 @@
    <Group
       location = "container:"
       name = "Storage">
+      <FileRef
+         location = "group:Modules/DataModule/DataModule.xcodeproj">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
