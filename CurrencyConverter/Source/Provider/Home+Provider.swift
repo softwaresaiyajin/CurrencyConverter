@@ -10,6 +10,15 @@ import Foundation
 import HomeModule
 import RxSwift
 import DataModule
+import NavigatorModule
+
+extension HomeViewController: IViewController {
+    
+    public static func nvm_create() -> UIViewController? {
+        return HomeViewController.create(dataProvider: Provider.shared,
+                                         routeProvider: Provider.shared)
+    }
+}
 
 extension CurrencyBalance: CurrencyBalanceProtocol {
     
@@ -68,5 +77,12 @@ extension Provider: DataProviderProtocol {
                                                  toCurrency: destinationCurrency))
         
         return result.map( { $0 })
+    }
+}
+
+extension Provider: RouteProviderProtocol {
+    
+    func hm_navigate(to path: Route, data parameters: Any?) {
+        
     }
 }

@@ -16,6 +16,7 @@
 		74917BC323AF800C00224009 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BC223AF800C00224009 /* Provider.swift */; };
 		74917BC523AF811A00224009 /* Home+Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BC423AF811A00224009 /* Home+Provider.swift */; };
 		74917BD323AF99DF00224009 /* PriceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BD223AF99DF00224009 /* PriceHelper.swift */; };
+		74917BD523AFA43D00224009 /* NavigatorModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74917BD423AFA43D00224009 /* NavigatorModule.framework */; };
 		74D9531B23AA819500B4EEA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D9531923AA819500B4EEA0 /* Main.storyboard */; };
 		74D9531D23AA819600B4EEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D9531C23AA819600B4EEA0 /* Assets.xcassets */; };
 		74D9532023AA819600B4EEA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D9531E23AA819600B4EEA0 /* LaunchScreen.storyboard */; };
@@ -55,6 +56,7 @@
 		74917BC223AF800C00224009 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		74917BC423AF811A00224009 /* Home+Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Provider.swift"; sourceTree = "<group>"; };
 		74917BD223AF99DF00224009 /* PriceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceHelper.swift; sourceTree = "<group>"; };
+		74917BD423AFA43D00224009 /* NavigatorModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NavigatorModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D9531223AA819500B4EEA0 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D9531A23AA819500B4EEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74D9531C23AA819600B4EEA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74917BD523AFA43D00224009 /* NavigatorModule.framework in Frameworks */,
 				74917BBD23AF7F7F00224009 /* DataModule.framework in Frameworks */,
 				74917BAF23AF7D8C00224009 /* Differentiator.framework in Frameworks */,
 				74D9535023AA82C600B4EEA0 /* HomeModule.framework in Frameworks */,
@@ -227,6 +230,7 @@
 		74D9534E23AA82C600B4EEA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74917BD423AFA43D00224009 /* NavigatorModule.framework */,
 				74917BBC23AF7F7F00224009 /* DataModule.framework */,
 				74D9534F23AA82C600B4EEA0 /* HomeModule.framework */,
 			);

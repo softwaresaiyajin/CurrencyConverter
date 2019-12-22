@@ -11,6 +11,9 @@
    <Group
       location = "container:"
       name = "Router">
+      <FileRef
+         location = "group:Modules/NavigatorModule/NavigatorModule.xcodeproj">
+      </FileRef>
    </Group>
    <Group
       location = "container:"

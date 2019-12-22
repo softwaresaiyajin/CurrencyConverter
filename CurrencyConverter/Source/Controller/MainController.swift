@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 import HomeModule
+import NavigatorModule
+import RxSwift
+
+enum Location: String {
+    case root = "/root"
+    case back = "/"
+}
 
 class MainController {
     
@@ -16,18 +23,41 @@ class MainController {
     
     private var window: UIWindow?
     
+    private lazy var bag: DisposeBag = {
+        return DisposeBag()
+    }()
+    
     private init() {}
     
-    func launch(in window: UIWindow, provider: Provider?) {
+    func launch(in window: UIWindow) {
         
         self.window = window;
-        //self.provider = provider;
-        
-        let controller = HomeViewController.create(dataProvider: provider,
-                                                   routeProvider: nil)
-        let navcon = UINavigationController(rootViewController: controller)
-        window.rootViewController = navcon
+        setupLocations()
+        setupLocationObservers()
+        setupRoot()
     }
     
+    private func setupLocations() {
+        
+        Navigator.shared
+            .register(path: Location.root.rawValue,to: HomeViewController.self)
+        
+    }
     
+    private func setupLocationObservers() {
+        
+        Navigator.shared.event.asObservable()
+            .subscribe(onNext : { [weak self] event in
+                
+                if let controller = event?.controller as? HomeViewController {
+                    self?.window?.rootViewController = UINavigationController(rootViewController: controller)
+                }
+            })
+            .disposed(by: bag)
+    }
+    
+    private func setupRoot() {
+        Navigator.shared
+            .navigate(to: Location.root.rawValue, data: nil)
+    }
 }
