@@ -93,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				74D9534423AA81F300B4EEA0 /* External */,
-				74D9534323AA81EC00B4EEA0 /* Internal */,
 				74D9531423AA819500B4EEA0 /* CurrencyConverter */,
 				74D9532923AA819600B4EEA0 /* CurrencyConverterTests */,
 				74D9533423AA819600B4EEA0 /* CurrencyConverterUITests */,
@@ -141,13 +140,6 @@
 				74D9533723AA819600B4EEA0 /* Info.plist */,
 			);
 			path = CurrencyConverterUITests;
-			sourceTree = "<group>";
-		};
-		74D9534323AA81EC00B4EEA0 /* Internal */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Internal;
 			sourceTree = "<group>";
 		};
 		74D9534423AA81F300B4EEA0 /* External */ = {

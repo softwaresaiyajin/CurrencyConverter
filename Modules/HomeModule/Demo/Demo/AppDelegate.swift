@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import HomeModule
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        let controller = HomeViewController.create(dataProvider: self,
+                                                   routeProvider: nil)
+        let navcon = UINavigationController(rootViewController: controller)
+        window?.rootViewController = navcon
+        
         // Override point for customization after application launch.
         return true
     }
@@ -40,7 +49,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
+
+
+extension AppDelegate: DataProviderProtocol {
+    
+    func hm_getConvertedAmountPreview(_ amount: Double,
+                                      from originCurrency: String,
+                                      to destinationCurrency: String) -> Observable<Double> {
+        return Observable.just(ConversionDemoApi.getConvertedAmountPreview(amount,
+                                                                           from: originCurrency,
+                                                                           to: destinationCurrency))
+    }
+    
+    func hm_submitRequest(amount: Double,
+                          from originCurrency: String,
+                          to destinationCurrency: String) -> Observable<ConversionResultProtocol?> {
+        return Observable.just(ConversionDemoApi.convertAmount(amount,
+                                                               from: originCurrency,
+                                                               to: destinationCurrency))
+    }
+    
+    func hm_getCurrencyBalances() -> Observable<[CurrencyBalanceProtocol]> {
+        
+        return Observable.just(ConversionDemoApi.supportedCurrencies)
+    }
+}

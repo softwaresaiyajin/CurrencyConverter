@@ -10,6 +10,24 @@
 		74582D0E23AA79D9006A1477 /* HomeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74582D0423AA79D9006A1477 /* HomeModule.framework */; };
 		74582D1323AA79D9006A1477 /* HomeModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74582D1223AA79D9006A1477 /* HomeModuleTests.swift */; };
 		74582D1523AA79D9006A1477 /* HomeModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 74582D0723AA79D9006A1477 /* HomeModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7464D81123AE4BEE00A35580 /* TransactionStepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464D81023AE4BEE00A35580 /* TransactionStepTableViewCell.swift */; };
+		7464D81323AE4F0900A35580 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464D81223AE4F0900A35580 /* Section.swift */; };
+		7489B66223AE516E00494265 /* BalanceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489B66123AE516E00494265 /* BalanceListTableViewCell.swift */; };
+		7489B66423AE5A0100494265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7489B66323AE5A0100494265 /* Main.storyboard */; };
+		7489B66823AE6D4000494265 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7489B66723AE6D3F00494265 /* RxDataSources.framework */; };
+		7489B66D23AE7A5A00494265 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7489B66C23AE7A5A00494265 /* Differentiator.framework */; };
+		7489B67223AF10A400494265 /* BalanceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489B67123AF10A400494265 /* BalanceCollectionViewCell.swift */; };
+		7489B67423AF14E300494265 /* ModuleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489B67323AF14E300494265 /* ModuleConstants.swift */; };
+		74917B1E23AF342100224009 /* AlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917B1D23AF342100224009 /* AlertController+Extension.swift */; };
+		74917B2123AF591600224009 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74917B2023AF591600224009 /* Media.xcassets */; };
+		74917B2323AF617800224009 /* ConversionResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917B2223AF617800224009 /* ConversionResultProtocol.swift */; };
+		74D9535F23ADF12700B4EEA0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9535D23ADF12700B4EEA0 /* HomeViewController.swift */; };
+		74D9536423ADF34800B4EEA0 /* CurrencyBalanceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9536323ADF34800B4EEA0 /* CurrencyBalanceProtocol.swift */; };
+		74D9536623ADF3D500B4EEA0 /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9536523ADF3D500B4EEA0 /* DataProviderProtocol.swift */; };
+		74D9536923ADF43400B4EEA0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D9536723ADF43400B4EEA0 /* RxSwift.framework */; };
+		74D9536A23ADF43400B4EEA0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D9536823ADF43400B4EEA0 /* RxCocoa.framework */; };
+		74D9536C23ADF5A600B4EEA0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9536B23ADF5A600B4EEA0 /* ViewModel.swift */; };
+		74D9536E23ADFAA100B4EEA0 /* RouteProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9536D23ADFAA100B4EEA0 /* RouteProviderProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +47,24 @@
 		74582D0D23AA79D9006A1477 /* HomeModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74582D1223AA79D9006A1477 /* HomeModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleTests.swift; sourceTree = "<group>"; };
 		74582D1423AA79D9006A1477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7464D81023AE4BEE00A35580 /* TransactionStepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionStepTableViewCell.swift; sourceTree = "<group>"; };
+		7464D81223AE4F0900A35580 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		7489B66123AE516E00494265 /* BalanceListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceListTableViewCell.swift; sourceTree = "<group>"; };
+		7489B66323AE5A0100494265 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7489B66723AE6D3F00494265 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = ../../Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		7489B66C23AE7A5A00494265 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = ../../Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		7489B67123AF10A400494265 /* BalanceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCollectionViewCell.swift; sourceTree = "<group>"; };
+		7489B67323AF14E300494265 /* ModuleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleConstants.swift; sourceTree = "<group>"; };
+		74917B1D23AF342100224009 /* AlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController+Extension.swift"; sourceTree = "<group>"; };
+		74917B2023AF591600224009 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		74917B2223AF617800224009 /* ConversionResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionResultProtocol.swift; sourceTree = "<group>"; };
+		74D9535D23ADF12700B4EEA0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		74D9536323ADF34800B4EEA0 /* CurrencyBalanceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyBalanceProtocol.swift; sourceTree = "<group>"; };
+		74D9536523ADF3D500B4EEA0 /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
+		74D9536723ADF43400B4EEA0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		74D9536823ADF43400B4EEA0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		74D9536B23ADF5A600B4EEA0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		74D9536D23ADFAA100B4EEA0 /* RouteProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteProviderProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7489B66823AE6D4000494265 /* RxDataSources.framework in Frameworks */,
+				74D9536A23ADF43400B4EEA0 /* RxCocoa.framework in Frameworks */,
+				7489B66D23AE7A5A00494265 /* Differentiator.framework in Frameworks */,
+				74D9536923ADF43400B4EEA0 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +93,7 @@
 		74582CFA23AA79D9006A1477 = {
 			isa = PBXGroup;
 			children = (
+				74D9535123ADEFCA00B4EEA0 /* External */,
 				74582D0623AA79D9006A1477 /* HomeModule */,
 				74582D1123AA79D9006A1477 /* HomeModuleTests */,
 				74582D0523AA79D9006A1477 /* Products */,
@@ -71,6 +112,8 @@
 		74582D0623AA79D9006A1477 /* HomeModule */ = {
 			isa = PBXGroup;
 			children = (
+				74D9535723ADF01800B4EEA0 /* Source */,
+				74D9535623ADF01800B4EEA0 /* Resource */,
 				74582D0723AA79D9006A1477 /* HomeModule.h */,
 				74582D0823AA79D9006A1477 /* Info.plist */,
 			);
@@ -84,6 +127,77 @@
 				74582D1423AA79D9006A1477 /* Info.plist */,
 			);
 			path = HomeModuleTests;
+			sourceTree = "<group>";
+		};
+		74D9535123ADEFCA00B4EEA0 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				7489B66C23AE7A5A00494265 /* Differentiator.framework */,
+				7489B66723AE6D3F00494265 /* RxDataSources.framework */,
+				74D9536823ADF43400B4EEA0 /* RxCocoa.framework */,
+				74D9536723ADF43400B4EEA0 /* RxSwift.framework */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		74D9535623ADF01800B4EEA0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				74917B2023AF591600224009 /* Media.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		74D9535723ADF01800B4EEA0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				74D9535C23ADF06E00B4EEA0 /* Helpers */,
+				74D9535B23ADF06800B4EEA0 /* ViewModel */,
+				74D9535A23ADF06300B4EEA0 /* View */,
+				74D9535923ADF04F00B4EEA0 /* Model */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		74D9535923ADF04F00B4EEA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74D9536323ADF34800B4EEA0 /* CurrencyBalanceProtocol.swift */,
+				74D9536523ADF3D500B4EEA0 /* DataProviderProtocol.swift */,
+				74D9536D23ADFAA100B4EEA0 /* RouteProviderProtocol.swift */,
+				7464D81223AE4F0900A35580 /* Section.swift */,
+				74917B2223AF617800224009 /* ConversionResultProtocol.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74D9535A23ADF06300B4EEA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7464D81023AE4BEE00A35580 /* TransactionStepTableViewCell.swift */,
+				74D9535D23ADF12700B4EEA0 /* HomeViewController.swift */,
+				7489B66123AE516E00494265 /* BalanceListTableViewCell.swift */,
+				7489B67123AF10A400494265 /* BalanceCollectionViewCell.swift */,
+				7489B66323AE5A0100494265 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74D9535B23ADF06800B4EEA0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74D9536B23ADF5A600B4EEA0 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74D9535C23ADF06E00B4EEA0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7489B67323AF14E300494265 /* ModuleConstants.swift */,
+				74917B1D23AF342100224009 /* AlertController+Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +262,7 @@
 				TargetAttributes = {
 					74582D0323AA79D9006A1477 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					74582D0C23AA79D9006A1477 = {
 						CreatedOnToolsVersion = 10.1;
@@ -177,6 +292,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74917B2123AF591600224009 /* Media.xcassets in Resources */,
+				7489B66423AE5A0100494265 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +311,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74917B2323AF617800224009 /* ConversionResultProtocol.swift in Sources */,
+				74D9536623ADF3D500B4EEA0 /* DataProviderProtocol.swift in Sources */,
+				7489B67423AF14E300494265 /* ModuleConstants.swift in Sources */,
+				74D9536423ADF34800B4EEA0 /* CurrencyBalanceProtocol.swift in Sources */,
+				74917B1E23AF342100224009 /* AlertController+Extension.swift in Sources */,
+				74D9536C23ADF5A600B4EEA0 /* ViewModel.swift in Sources */,
+				7489B67223AF10A400494265 /* BalanceCollectionViewCell.swift in Sources */,
+				7464D81323AE4F0900A35580 /* Section.swift in Sources */,
+				7464D81123AE4BEE00A35580 /* TransactionStepTableViewCell.swift in Sources */,
+				74D9536E23ADFAA100B4EEA0 /* RouteProviderProtocol.swift in Sources */,
+				7489B66223AE516E00494265 /* BalanceListTableViewCell.swift in Sources */,
+				74D9535F23ADF12700B4EEA0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,12 +470,14 @@
 		74582D1923AA79D9006A1477 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS";
 				INFOPLIST_FILE = HomeModule/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,6 +488,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.paysera.HomeModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,12 +497,14 @@
 		74582D1A23AA79D9006A1477 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../Carthage/Build/iOS";
 				INFOPLIST_FILE = HomeModule/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,6 +523,7 @@
 		74582D1C23AA79D9006A1477 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HomeModuleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +541,7 @@
 		74582D1D23AA79D9006A1477 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HomeModuleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
