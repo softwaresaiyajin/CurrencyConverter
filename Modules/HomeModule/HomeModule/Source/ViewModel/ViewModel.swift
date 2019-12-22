@@ -58,6 +58,17 @@ class ViewModel {
         receiveTransaction.displayAmount.value = 0
     }
     
+    func setDefaults(currencies: [CurrencyBalanceProtocol]) {
+        
+        if sellTransaction.currency.value == nil {
+            sellTransaction.currency.value = currencies.count > 0 ? currencies[0] : nil
+        }
+        
+        if receiveTransaction.currency.value == nil {
+            receiveTransaction.currency.value = currencies.count > 1 ? currencies[1] : nil
+        }
+    }
+    
     func fetchData() {
         
         let currencies = dataProvider?.hm_getCurrencyBalances() ?? Observable.just([]);
@@ -66,8 +77,8 @@ class ViewModel {
                 
                 self?.resetValues()
                 self?.availableCurrencies = current
-                self?.sellTransaction.currency.value = current.count > 0 ? current[0] : nil
-                self?.receiveTransaction.currency.value = current.count > 1 ? current[1] : nil
+                
+                self?.setDefaults(currencies: current)
                 
                 let transactionTypes = [self?.sellTransaction, self?.receiveTransaction]
                     .compactMap( { CellType.transactionStep($0!) })

@@ -9,27 +9,42 @@
 import Foundation
 import RxSwift
 
+/*
+    All processes contained in this class should be
+    performed remotely. The purpose of this class to
+    just mock the functionality
+ */
+
 fileprivate extension CurrencyConversionResult {
     
     func asObservable() -> Observable<CurrencyConversionResult> {
         return Observable.just(self)
     }
-    
 }
 
 struct ConversionDemoApi {
     
-    static let commissionFeeRate = 0.007
+    fileprivate struct Constant {
+        
+        static let commissionFeeRate = 0.007
+        
+        static let freeTransactionThreshold = 5
+    }
     
-    static let balanceList = CurrencyBalanceList(items: [CurrencyBalance(code: "EUR", name: "EUR", balance: 1000),
-                                                         CurrencyBalance(code: "JPY", name: "JPY", balance: 0),
-                                                         CurrencyBalance(code: "USD", name: "USD", balance: 0)])
     
-    private static var supportedCurrencies: [CurrencyBalance] { get { return balanceList.items }}
+    private static var storage: ConversionDemoStorage = {
+        return ConversionDemoStorage()
+    }()
+
+    static let balanceList = CurrencyBalanceList(items: storage.getCurrencyBalances())
     
     static func convertAmount(_ amount: Double,
                               from origin: String,
                               to destination: String) -> Observable<CurrencyConversionResult> {
+        
+        debugPrint("Converting: \(amount) | \(origin) | \(destination)")
+        
+        let supportedCurrencies = balanceList.items
         
         guard let originCurrency = supportedCurrencies.first(where: { $0.code == origin} ),
             let destCurrency = supportedCurrencies.first(where: { $0.code == destination }),
@@ -42,7 +57,10 @@ struct ConversionDemoApi {
                                                 isSuccess:  false).asObservable()
         }
         
-        let commissionFee = amount * commissionFeeRate
+        let commissionRate = storage.getTransactionCount() < Constant.freeTransactionThreshold
+            ? 0.0
+            : Constant.commissionFeeRate
+        let commissionFee = amount * commissionRate
         let transactionAmount = amount + commissionFee
         guard transactionAmount <= originCurrency.balance else {
             return CurrencyConversionResult(fromAmount: amount,
@@ -58,10 +76,8 @@ struct ConversionDemoApi {
                                                       fromCurrency: origin,
                                                       toCurrency: destination))
 
-        
-        
         return credited
-            .map { (result) -> CurrencyConversionResult in
+            .map({ (result) -> CurrencyConversionResult in
                 
                 guard let converted = result?.amount, amount > 0 else {
                     return CurrencyConversionResult(fromAmount: amount,
@@ -74,6 +90,9 @@ struct ConversionDemoApi {
                 
                 destCurrency.balance += converted
                 originCurrency.balance -= transactionAmount
+                storage.saveCurrencyBalances(supportedCurrencies)
+                storage.recordSuccessfulTransaction()
+            
                 return CurrencyConversionResult(fromAmount: amount,
                                                 fromCurrency: origin,
                                                 toAmount: converted,
@@ -81,7 +100,7 @@ struct ConversionDemoApi {
                                                 commissionFee: commissionFee,
                                                 isSuccess:  true)
                 
-            }
+            }).share(replay: 1, scope: .whileConnected)
     }
     
 }
