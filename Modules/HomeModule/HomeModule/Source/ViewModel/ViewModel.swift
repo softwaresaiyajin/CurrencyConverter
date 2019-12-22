@@ -77,7 +77,6 @@ class ViewModel {
                 
                 self?.resetValues()
                 self?.availableCurrencies = current
-                
                 self?.setDefaults(currencies: current)
                 
                 let transactionTypes = [self?.sellTransaction, self?.receiveTransaction]

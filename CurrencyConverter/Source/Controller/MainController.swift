@@ -40,7 +40,7 @@ class MainController {
     private func setupLocations() {
         
         Navigator.shared
-            .register(path: Location.root.rawValue,to: HomeViewController.self)
+            .register(paths: Location.root.rawValue,to: HomeViewController.self)
         
     }
     

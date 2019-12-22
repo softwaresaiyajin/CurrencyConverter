@@ -10,7 +10,10 @@
 import Foundation
 
 public struct Event {
-    public var controller:UIViewController?
-    public var data:Any?
-    public var path:String?
+    
+    public let controller: UIViewController?
+    
+    public let data: Any?
+    
+    public let path: String?
 }
