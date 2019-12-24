@@ -1,0 +1,12 @@
+[submodule "Carthage/Checkouts/Alamofire"]
+	path = Carthage/Checkouts/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
+[submodule "Carthage/Checkouts/RxAlamofire"]
+	path = Carthage/Checkouts/RxAlamofire
+	url = https://github.com/RxSwiftCommunity/RxAlamofire.git
+[submodule "Carthage/Checkouts/RxSwift"]
+	path = Carthage/Checkouts/RxSwift
+	url = https://github.com/ReactiveX/RxSwift.git
+[submodule "Carthage/Checkouts/RxDataSources"]
+	path = Carthage/Checkouts/RxDataSources
+	url = https://github.com/RxSwiftCommunity/RxDataSources.git
