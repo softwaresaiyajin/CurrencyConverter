@@ -16,9 +16,11 @@ public struct CurrencyPreviewResult {
     
 }
 
+// MARK: -
+// MARK: Codable
 extension CurrencyPreviewResult: Codable {
     
-    fileprivate enum Identifier: String, CodingKey {
+    private enum Identifier: String, CodingKey {
         case amount
         case currency
     }

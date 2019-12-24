@@ -18,6 +18,8 @@ class BalanceCollectionViewCell: UICollectionViewCell {
     
 }
 
+// MARK: -
+// MARK: BalanceCollectionViewCell for Custom UI Properties
 extension BalanceCollectionViewCell {
     
     var balance: String? {

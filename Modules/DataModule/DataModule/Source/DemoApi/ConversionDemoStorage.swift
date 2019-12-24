@@ -15,7 +15,7 @@ import Foundation
  */
 class ConversionDemoStorage {
     
-    fileprivate struct Constant {
+    private struct Constant {
     
         struct Key {
             static let currencies = "currencies"

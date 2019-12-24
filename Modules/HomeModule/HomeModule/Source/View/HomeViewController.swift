@@ -55,7 +55,7 @@ public final class HomeViewController: UITableViewController {
             .getStyle()
             .subscribe(onNext : { [weak self] current in
                 
-                StyleHelper.apply(style: current, to: self?.submitButton)
+                StyleHelper.applyStyle(current, to: self?.submitButton)
                 
             }).disposed(by: bag)
     }

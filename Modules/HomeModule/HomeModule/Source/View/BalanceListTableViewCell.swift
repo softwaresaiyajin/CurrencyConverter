@@ -51,6 +51,8 @@ class BalanceListTableViewCell: UITableViewCell {
     
 }
 
+// MARK: -
+// MARK: UICollectionViewDataSource extension
 extension BalanceListTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView,

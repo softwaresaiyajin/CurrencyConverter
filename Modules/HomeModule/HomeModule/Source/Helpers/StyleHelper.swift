@@ -10,7 +10,8 @@ import Foundation
 
 struct StyleHelper {
     
-    static func apply(style: StyleProtocol?, to view: UIButton?) {
+    static func applyStyle(_ style: StyleProtocol?,
+                           to view: UIButton?) {
         
         guard let element = view else { return }
         
@@ -18,5 +19,4 @@ struct StyleHelper {
         element.layer.cornerRadius = style?.hm_buttonCornerRadius ?? 0
         element.clipsToBounds = element.layer.cornerRadius > 0
     }
-    
 }

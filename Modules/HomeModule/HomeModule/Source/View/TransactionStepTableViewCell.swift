@@ -26,6 +26,8 @@ class TransactionStepTableViewCell: UITableViewCell {
     
 }
 
+// MARK: -
+// MARK: TransactionStepTableViewCell for Custom UI Properties
 extension TransactionStepTableViewCell {
     
     var currencyBalanceTextColor: UIColor?

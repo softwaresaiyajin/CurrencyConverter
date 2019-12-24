@@ -10,7 +10,7 @@ import Foundation
 
 public class CurrencyConversionResult: Codable {
     
-    fileprivate enum Identifier: String, CodingKey {
+    private enum Identifier: String, CodingKey {
         case fromAmount
         case toAmount
         case fromCurrency

@@ -10,7 +10,7 @@ import Foundation
 
 public class CurrencyBalanceList: Codable  {
     
-    fileprivate enum Identifier: String, CodingKey {
+    private enum Identifier: String, CodingKey {
         case items
     }
     

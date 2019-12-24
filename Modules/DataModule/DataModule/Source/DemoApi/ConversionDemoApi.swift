@@ -15,7 +15,7 @@ import RxSwift
     just mock the functionality
  */
 
-fileprivate extension CurrencyConversionResult {
+private extension CurrencyConversionResult {
     
     func asObservable() -> Observable<CurrencyConversionResult> {
         return Observable.just(self)
@@ -24,7 +24,7 @@ fileprivate extension CurrencyConversionResult {
 
 struct ConversionDemoApi {
     
-    fileprivate struct Constant {
+    private struct Constant {
         
         static let commissionFeeRate = 0.007
         

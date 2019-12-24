@@ -10,7 +10,8 @@ import Foundation
 
 extension UIAlertController {
     
-    func addActions(_ actions: [UIAlertAction], includesCancel: Bool = false) {
+    func addActions(_ actions: [UIAlertAction],
+                    includesCancel: Bool = false) {
         
         var allActions = actions
         
