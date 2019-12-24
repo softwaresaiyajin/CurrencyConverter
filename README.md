@@ -6,7 +6,7 @@ The application is built on MVVM+RS, a modular architecture approach. This enabl
 
 - MVVM - this is the Model-View-Viewmodel design pattern. With the development of Rx libraries for iOS, data bindings are now possible. In this architecture, the developer considers each screen in an application as a feature and is put to its own module.
 
-- Router - modular architecture won't be if controllers are tightly-coupled to one another. To eliminate that, a navigation module is needed. This handles all navigation-related processes in the application.
+- Router - modular architecture won't be possible if controllers are tightly-coupled to one another. To eliminate that, a navigation module is needed. This handles all navigation-related processes in the application.
 
 - Storage - Apple supports multiple platforms: iOS, macOS, watchOS and tvOS, the views associated with each platform may be different due to design guidelines or target user experiences but the data you'll be providing to your applications, if you plan to support platforms other than iOS, will almost be the same. For reusability, you should put all data-related objects into a single module. This usually handles network operations, mapping, caching and peristence logic.
 
@@ -18,7 +18,7 @@ The application is built on MVVM+RS, a modular architecture approach. This enabl
 
 ## Technologies
 
-Below are libraries use in developing the application:
+Below are libraries used in developing the application:
 
 - Carthage - dependency management
 - RxSwift - functional operations
@@ -31,7 +31,7 @@ Below are libraries use in developing the application:
 - Clone/download the repository, stay in master branch
 - Install Carthage via terminal or package. Instructions [here](https://www.raywenderlich.com/416-carthage-tutorial-getting-started).
 - In terminal, navigate to directory of the project
-- Run, carthage bootstrap --platform iOS --use-submodules
+- Run: carthage bootstrap --platform iOS --use-submodules
 - Once finished, open CurrencyConverter.xcworkspace
 - Build the application
 
