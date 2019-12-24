@@ -1,5 +1,5 @@
 ## Overview
-This application demonstrates the programming skills of the developer. Acceptance criteria are defined [here](https://gist.github.com/vytautasgimbutas/447822c842e3dba68e7d9d2792932ee1). 
+This application demonstrates the programming skills of the developer. 
 
 ## Architecture
 The application is built on MVVM+RS, a modular architecture approach. This enables developers to strictly separate the features in an application into smaller components. This eliminates tight-coupling making the application testable and more manageable. Below are the components of the architecture:
