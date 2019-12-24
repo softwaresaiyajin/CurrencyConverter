@@ -24,6 +24,9 @@
 		74917BD123AF8E3B00224009 /* CurrencyBalanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BD023AF8E3B00224009 /* CurrencyBalanceList.swift */; };
 		74917BDA23AFC21400224009 /* ConversionDemoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BD923AFC21400224009 /* ConversionDemoApi.swift */; };
 		74917BDC23AFC23800224009 /* ConversionDemoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BDB23AFC23800224009 /* ConversionDemoStorage.swift */; };
+		74917BF423B231C300224009 /* DefaultRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BF323B231C300224009 /* DefaultRule.swift */; };
+		74917BF623B2351B00224009 /* FreeOnNthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BF523B2351B00224009 /* FreeOnNthRule.swift */; };
+		74917BF823B236BA00224009 /* FreeOnAmountRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74917BF723B236BA00224009 /* FreeOnAmountRule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		74917BD023AF8E3B00224009 /* CurrencyBalanceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyBalanceList.swift; sourceTree = "<group>"; };
 		74917BD923AFC21400224009 /* ConversionDemoApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionDemoApi.swift; sourceTree = "<group>"; };
 		74917BDB23AFC23800224009 /* ConversionDemoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionDemoStorage.swift; sourceTree = "<group>"; };
+		74917BF323B231C300224009 /* DefaultRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRule.swift; sourceTree = "<group>"; };
+		74917BF523B2351B00224009 /* FreeOnNthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeOnNthRule.swift; sourceTree = "<group>"; };
+		74917BF723B236BA00224009 /* FreeOnAmountRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeOnAmountRule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,10 +196,21 @@
 		74917BD823AFC1F700224009 /* DemoApi */ = {
 			isa = PBXGroup;
 			children = (
+				74917BF223B2319800224009 /* Rules */,
 				74917BD923AFC21400224009 /* ConversionDemoApi.swift */,
 				74917BDB23AFC23800224009 /* ConversionDemoStorage.swift */,
 			);
 			path = DemoApi;
+			sourceTree = "<group>";
+		};
+		74917BF223B2319800224009 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				74917BF323B231C300224009 /* DefaultRule.swift */,
+				74917BF523B2351B00224009 /* FreeOnNthRule.swift */,
+				74917BF723B236BA00224009 /* FreeOnAmountRule.swift */,
+			);
+			path = Rules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,14 +322,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74917BF423B231C300224009 /* DefaultRule.swift in Sources */,
 				74917BA623AF780A00224009 /* ClientRequest.swift in Sources */,
 				74917BCF23AF88D700224009 /* CurrencyConversionResult.swift in Sources */,
 				74917BCB23AF85FF00224009 /* CurrencyBalance.swift in Sources */,
 				74917BD123AF8E3B00224009 /* CurrencyBalanceList.swift in Sources */,
 				74917BA723AF780A00224009 /* DataManager.swift in Sources */,
+				74917BF623B2351B00224009 /* FreeOnNthRule.swift in Sources */,
 				74917BCD23AF883C00224009 /* CurrencyPreviewResult.swift in Sources */,
 				74917BDC23AFC23800224009 /* ConversionDemoStorage.swift in Sources */,
 				74917BC723AF84F700224009 /* LocalResourceManager.swift in Sources */,
+				74917BF823B236BA00224009 /* FreeOnAmountRule.swift in Sources */,
 				74917BDA23AFC21400224009 /* ConversionDemoApi.swift in Sources */,
 				74917BA323AF761200224009 /* Resource.swift in Sources */,
 			);

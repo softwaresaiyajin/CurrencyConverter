@@ -57,12 +57,13 @@ struct ConversionDemoApi {
                                                 isSuccess:  false).asObservable()
         }
         
-        let commissionRate = storage.getTransactionCount() < Constant.freeTransactionThreshold
-            ? 0.0
-            : Constant.commissionFeeRate
-        let commissionFee = amount * commissionRate
-        let transactionAmount = amount + commissionFee
-        guard transactionAmount <= originCurrency.balance else {
+        //Use default conversion rule set
+        let rule = DefaultRule(storage: storage,
+                               originCurrency: originCurrency,
+                               targetCurrency: destCurrency,
+                               amount: amount)
+        
+        guard rule.canExecuteTransaction else {
             return CurrencyConversionResult(fromAmount: amount,
                                             fromCurrency: origin,
                                             toAmount: 0,
@@ -89,7 +90,7 @@ struct ConversionDemoApi {
                 }
                 
                 destCurrency.balance += converted
-                originCurrency.balance -= transactionAmount
+                originCurrency.balance -= rule.transactionAmount
                 storage.saveCurrencyBalances(supportedCurrencies)
                 storage.recordSuccessfulTransaction()
             
@@ -97,7 +98,7 @@ struct ConversionDemoApi {
                                                 fromCurrency: origin,
                                                 toAmount: converted,
                                                 toCurrency: destination,
-                                                commissionFee: commissionFee,
+                                                commissionFee: rule.commissionFee,
                                                 isSuccess:  true)
                 
             }).share(replay: 1, scope: .whileConnected)
