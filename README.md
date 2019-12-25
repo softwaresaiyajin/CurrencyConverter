@@ -16,6 +16,11 @@ The application is built on MVVM+RS, a modular architecture approach. This enabl
 - Each module has its own demo project, which is used to test the feature before integrating it to application layer, this enables faster developer testing since developers won't have to navigate sets of screens just to debug a specific feature.
 - The applayer binds the modules using navigation and data modules.
 
+## Protocol Conformances
+
+- Protocols are suffixed with 'Protocol' so it will be easy to distinguished and declarative as well.
+- The functions and variables are prefixed with string that refers to the module (ie, hm_ for HomeModule) to eliminate ambiguity with other protocol conformances in the future because  it is possible that other module's protocols has the same name of variables and/or functions, 
+
 ## Technologies
 
 Below are libraries used in developing the application:
