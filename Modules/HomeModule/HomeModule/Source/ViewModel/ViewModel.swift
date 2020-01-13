@@ -85,7 +85,7 @@ class ViewModel {
                 self?.sections.value = [SectionData(model: Constants.myBalances, items: [CellType.balances(current)]),
                                         SectionData(model: Constants.currencyExchange, items: transactionTypes)]
             
-        }).disposed(by: disposeBag ?? DisposeBag())
+            }).disposed(by: disposeBag ?? DisposeBag())
     }
     
     @discardableResult

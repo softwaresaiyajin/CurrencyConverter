@@ -317,14 +317,16 @@
 				TargetAttributes = {
 					74D9531123AA819500B4EEA0 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1130;
 					};
 					74D9532523AA819600B4EEA0 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 74D9531123AA819500B4EEA0;
 					};
 					74D9533023AA819600B4EEA0 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 74D9531123AA819500B4EEA0;
 					};
 				};
@@ -602,7 +604,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.CurrencyConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -624,7 +626,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.CurrencyConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -643,7 +645,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.CurrencyConverterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrencyConverter.app/CurrencyConverter";
 			};
@@ -663,7 +665,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.CurrencyConverterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CurrencyConverter.app/CurrencyConverter";
 			};
@@ -682,7 +684,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.CurrencyConverterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CurrencyConverter;
 			};
@@ -701,7 +703,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.CurrencyConverterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CurrencyConverter;
 			};

@@ -21,7 +21,7 @@ class DefaultRule {
     
     var transactionAmount: Double { return commissionFee + amount }
     
-    internal(set) var commissionFee: Double
+    var commissionFee: Double
     
     let originCurrency: CurrencyBalance
     
